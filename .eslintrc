@@ -1,0 +1,28 @@
+{
+  "globals": {
+    "figma": "readonly",
+    "__html__": "readonly"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jquery": true
+  },
+  "plugins": ["@babel", "@typescript-eslint"],
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  // "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "babelOptions": {
+      "configFile": "./node_modules/@babel/preset-env/lib/index.js"
+    },
+
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  }
+}
