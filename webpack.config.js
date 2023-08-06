@@ -15,17 +15,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.pug$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'pug-loader',
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        enforce: 'pre',
-        use: [{ loader: 'webpack-glob-loader' }],
-      },
-      { test: /\.(sass|scss|css)$/, use: ['style-loader', { loader: 'css-loader' }, 'sass-loader'] },
       { test: /\.(png|jpg|gif|webp|svg)$/, loader: 'url-loader' },
       {
         test: /\.(ts|tsx|js|jsx)$/,
@@ -54,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './app/pug/index.pug',
+      template: './app/index.html',
       filename: 'ui.html',
       inject: 'body',
       chunks: ['ui'],
