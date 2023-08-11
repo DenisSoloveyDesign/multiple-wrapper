@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@create-figma-plugin/utilities": "^2.4.0",
+    "@emailjs/browser": "^3.11.0",
     "@figma-plugin/helpers": "^0.15.2"
   }
 }
