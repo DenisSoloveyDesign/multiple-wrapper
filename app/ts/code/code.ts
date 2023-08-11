@@ -1,37 +1,90 @@
+import { strings } from './../strings';
 //// ================================ Imports ======================================
-
-// import {} from '@figma-plugin/helpers' // - https://github.com/figma-plugin-helper-functions/figma-plugin-helpers
-// import {} from '@create-figma-plugin/utilities' // - https://yuanqing.github.io/create-figma-plugin/utilities/
 
 import figmaFileCheck from './_figmaFileCheck-function';
 import nodeBundler from './nodeBundler/_nodeBundler-function';
 import group from './group/_group';
 import setFrame from './setFrame/_setFrame';
 import setAutoLayout from './setAutoLayout/_setAutoLayout';
-import transformToAutolayout from './_transformToAutolayout';
+import transformToAutolayout from './transformToAutoLayout/_transformToAutolayout';
 import NodeBundle from './nodeBundler/_nodeBundler-interface';
+import sendError from './onError/sendError-Function';
 
 //// ================================ Code ======================================
+console.clear();
 
 figmaFileCheck();
-const bundle = nodeBundler();
+let bundle;
 
-switch (figma.command) {
+try {
+  bundle = nodeBundler();
+  if ((bundle as NodeBundle[] | SceneNode[]).length === 0) figma.closePlugin();
+} catch (e) {
+  sendError(e, '📄 code.ts |  Function "nodeBundler()"');
+}
+
+const command = figma.command.replace(/-one|-together/g, '');
+
+switch (command) {
   case 'group':
-    if (bundle) figma.currentPage.selection = group(bundle as NodeBundle[]);
+    {
+      try {
+        if (bundle) figma.currentPage.selection = group(bundle as NodeBundle[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "group" - Function "group()"');
+      }
+      figma.closePlugin(strings.groupAdded);
+    }
     break;
   case 'frame':
     if (bundle) {
-      const groups = group(bundle as NodeBundle[])
-      figma.currentPage.selection = setFrame(groups);
+      let groups;
+      try {
+        groups = group(bundle as NodeBundle[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "frame" - Function "group()"');
+      }
+
+      try {
+        figma.currentPage.selection = setFrame(groups as GroupNode[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "frame" - Function "setFrame()"');
+      }
+      figma.closePlugin(strings.frameAdded);
     }
     break;
   case 'autoLayout':
-    if (bundle) figma.currentPage.selection = setAutoLayout(setFrame(group(bundle)));
+    if (bundle) {
+      let groups;
+      let frames;
+      try {
+        groups = group(bundle as NodeBundle[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "autoLayout" - Function "group()"');
+      }
+
+      try {
+        frames = setFrame(groups as GroupNode[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "autoLayout" - Function "setFrame()"');
+      }
+
+      try {
+        figma.currentPage.selection = setAutoLayout(frames as FrameNode[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "autoLayout" - Function "setAutoLayout()"');
+      }
+      figma.closePlugin(strings.autoLayoutAdded);
+    }
     break;
   case 'transform':
-    if (bundle) transformToAutolayout(bundle);
+    if (bundle) {
+      try {
+        transformToAutolayout(bundle as SceneNode[]);
+      } catch (e) {
+        sendError(e, '📄 code.ts | Command "transform" - Function "transformToAutolayout()"');
+      }
+      figma.closePlugin(strings.autoLayoutAdded);
+    }
     break;
 }
-
-figma.closePlugin()
