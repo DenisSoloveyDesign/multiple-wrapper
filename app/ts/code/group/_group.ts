@@ -1,22 +1,31 @@
 import { getNodeIndex } from '@figma-plugin/helpers';
 import NodeBundle from '../nodeBundler/_nodeBundler-interface';
-import getFirstNodeIndex from './_getFirstNodeIndex';
 
 export default function group(bundle: NodeBundle[]): GroupNode[] {
-  const condition = bundle.length > 1;
-  const family = condition ? bundle : bundle[0].children;
+  const condition = !figma.command.includes('-one');
+  // const family = condition ? bundle : bundle[0].children;
 
-  return (family as NodeBundle[]).reduce((acc: GroupNode[], item: NodeBundle | SceneNode) => {
-    const parent = condition ? (item as NodeBundle).parent : bundle[0].parent,
-      childrens = condition ? (item as NodeBundle).children : [item];
-    
-    const order = condition ? getFirstNodeIndex((item as NodeBundle)) : getNodeIndex((item as SceneNode));
+  return (bundle as NodeBundle[]).reduce((acc: GroupNode[], item: NodeBundle | SceneNode) => {
+    const parent = (item as NodeBundle).parent,
+      childrens = (item as NodeBundle).children;
 
-    const group = figma.group(childrens as SceneNode[], parent);
-    group.expanded = false;
-    parent.insertChild(order, group);
+    if (condition) {
+      const order = getNodeIndex((item as NodeBundle).children[0]);
+      const group = figma.group(childrens as SceneNode[], parent);
+      group.expanded = false;
+      parent.insertChild(order, group);
+      acc.push(group);
+      
+      return acc;
+    }
 
-    acc.push(group);
+    for (const child of childrens) {
+      const order = getNodeIndex(child);
+      const group = figma.group([child], parent);
+      group.expanded = false;
+      parent.insertChild(order, group);
+      acc.push(group);
+    }
 
     return acc;
   }, [] as GroupNode[]);
