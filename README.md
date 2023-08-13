@@ -1,16 +1,21 @@
-<h1>Commands</h1>
+Sometimes you need to wrap elements inside several frames or groups, and regular methods are not enough for this. That is why this plugin was created. It can wrap selected elements together or wrap each of selected as frames or auto layouts, and also it can change selected frames or groups to auto layouts
 
-*- Start project for development -*
-`npm run dev`
+### **FEATURES**
 
-*- Build project -*
-`npm run prod`
+→ Works similar to Figma's grouping capabilities
 
+→ Wrap together selected child elements individually based on parent
 
-<h1>Addons Docs</h1>
+→ Wrap each selected element individually
 
-Figma Plugin Helper | https://github.com/figma-plugin-helper-functions/figma-plugin-helpers
+→ Wrap selected elements as groups, frames or auto layouts
 
-Create Figma Plugin - utilities | https://yuanqing.github.io/create-figma-plugin/utilities/
+→ Change group or frame to autolayout
+
+→ Supports auto layout wrap feature of figma
+
+⚠️ Plugin doesnt work with sections (except for wrapping in a group), childs of component set and childs of instances. If you try to run it with these selected components, then nothing will happen
+
+---
 
 Do you like this plugin? I would be very grateful for your support - [Buy me a coffee ☕](https://www.buymeacoffee.com/Denis.Solovey)
