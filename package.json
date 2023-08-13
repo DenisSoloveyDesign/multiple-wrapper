@@ -37,6 +37,8 @@
   "dependencies": {
     "@create-figma-plugin/utilities": "^2.4.0",
     "@emailjs/browser": "^3.11.0",
-    "@figma-plugin/helpers": "^0.15.2"
+    "@figma-plugin/helpers": "^0.15.2",
+    "array-sorter": "^1.0.3",
+    "forto-sorter": "^1.0.4"
   }
 }
