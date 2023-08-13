@@ -14,6 +14,7 @@ Sometimes you need to wrap elements inside several frames or groups, and regular
 
 → Supports auto layout wrap feature of figma
 
+<br>
 ⚠️ Plugin doesnt work with sections (except for wrapping in a group), childs of component set and childs of instances. If you try to run it with these selected components, then nothing will happen
 
 ---
