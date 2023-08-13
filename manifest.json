@@ -1,0 +1,32 @@
+{
+  "name": "Multiple Grouper",
+  "id": "1219008484601651003",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": ["figma"],
+  "menu": [
+    {
+      "name": "Wrap each as",
+      "menu": [
+        { "name": "Group 🔳", "command": "group-one" },
+        { "name": "Frame 🔳", "command": "frame-one" },
+        { "name": "Auto layout 🔳", "command": "autoLayout-one" }
+      ]
+    },
+    { 
+      "name": "Wrap together as",
+      "menu": [
+        { "name": "Group 📦", "command": "group-together" },
+        { "name": "Frame 📦", "command": "frame-together" },
+        { "name": "Auto layout 📦", "command": "autoLayout-together" }
+      ]
+    },
+    { "separator": true },
+    { "name": "Change to Auto Layout", "command": "transform" },
+    { "separator": true },
+    { "name": "Buy me a coffee ☕", "command": "coffee" }
+  ]
+}
