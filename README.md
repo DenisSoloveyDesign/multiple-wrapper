@@ -1,22 +1,16 @@
-Sometimes you need to group elements inside several frames or groups, and regular methods are not enough for this. That is why this plugin was created. It can group elements as frames or auto layouts, and also it can change selected frames or groups to auto layouts
+<h1>Commands</h1>
 
-### **FEATURES**
+*- Start project for development -*
+`npm run dev`
 
-→ Works similar to Figma's grouping capabilities
+*- Build project -*
+`npm run prod`
 
-→ Wrap together selected child elements individually based on parent
 
-→ Wrap each selected element individually
+<h1>Addons Docs</h1>
 
-→ Wrap selected elements as groups, frames or auto layouts
+Figma Plugin Helper | https://github.com/figma-plugin-helper-functions/figma-plugin-helpers
 
-→ Change group or frame to autolayout
-
-→ Supports auto layout wrap feature of figma
-
-<br>
-⚠️ Plugin doesnt work with sections (except for wrapping in a group), childs of component set and childs of instances. If you try to run it with these selected components, then nothing will happen
-
----
+Create Figma Plugin - utilities | https://yuanqing.github.io/create-figma-plugin/utilities/
 
 Do you like this plugin? I would be very grateful for your support - [Buy me a coffee ☕](https://www.buymeacoffee.com/Denis.Solovey)
