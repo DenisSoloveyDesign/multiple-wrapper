@@ -6,11 +6,11 @@ Sometimes you need to wrap elements inside several frames or groups, and regular
 
 → It works similar to Figma's grouping capabilities
 
-→ Wrapping together selected child elements individually based on parent
+→ Wrap together selected child elements individually based on parent
 
-→ Wrapping each selected element individually
+→ Wrap each selected element individually
 
-→ Wrapping selected elements as groups, frames or auto layouts
+→ Wrap selected elements as groups, frames or auto layouts
 
 → Changing group or frame to autolayout
 
