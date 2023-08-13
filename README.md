@@ -4,15 +4,15 @@ Sometimes you need to wrap elements inside several frames or groups, and regular
 
 ### **FEATURES**
 
-→ Works similar to Figma's grouping capabilities
+→ It works similar to Figma's grouping capabilities
 
-→ Wrap together selected child elements individually based on parent
+→ Wrapping together selected child elements individually based on parent
 
-→ Wrap each selected element individually
+→ Wrapping each selected element individually
 
-→ Wrap selected elements as groups, frames or auto layouts
+→ Wrapping selected elements as groups, frames or auto layouts
 
-→ Change group or frame to autolayout
+→ Changing group or frame to autolayout
 
 → Supports auto layout wrap feature of figma
 
