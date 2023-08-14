@@ -8,4 +8,7 @@ export default function setDefaultAutoLayoutProps(frame: FrameNode): void {
   frame.paddingRight = 8;
   frame.paddingBottom = 8;
   frame.paddingLeft = 8;
+
+  frame.primaryAxisSizingMode = 'AUTO';
+  frame.counterAxisSizingMode = 'AUTO';
 }

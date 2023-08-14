@@ -8,7 +8,7 @@ export const emailParams: EmailParams = {
   service: 'service_uo65qcb',
   template: 'template_bur5exc',
   content: {
-    plugin_name: '🧩 Multiple Groups',
+    plugin_name: '🧩 Multiple Wrapper',
     function_name: '',
     error_message: '',
     error_stack: ''

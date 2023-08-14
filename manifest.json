@@ -9,19 +9,15 @@
   "editorType": ["figma"],
   "menu": [
     {
-      "name": "Wrap each as",
+      "name": "Wrap",
       "menu": [
-        { "name": "Group 🔳", "command": "group-one" },
-        { "name": "Frame 🔳", "command": "frame-one" },
-        { "name": "Auto layout 🔳", "command": "autoLayout-one" }
-      ]
-    },
-    { 
-      "name": "Wrap together as",
-      "menu": [
-        { "name": "Group 📦", "command": "group-together" },
-        { "name": "Frame 📦", "command": "frame-together" },
-        { "name": "Auto layout 📦", "command": "autoLayout-together" }
+        { "name": "Together as Group", "command": "group-together" },
+        { "name": "Together as Frame", "command": "frame-together" },
+        { "name": "Together as Auto layout", "command": "autoLayout-together" },
+        { "separator": true },
+        { "name": "Each as Group", "command": "group-one" },
+        { "name": "Each as Frame", "command": "frame-one" },
+        { "name": "Each as Auto layout", "command": "autoLayout-one" }
       ]
     },
     { "separator": true },
