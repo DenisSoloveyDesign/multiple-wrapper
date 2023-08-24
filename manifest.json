@@ -20,9 +20,8 @@
         { "name": "Each as Auto layout", "command": "autoLayout-one" }
       ]
     },
-    { "separator": true },
     { "name": "Change to Auto Layout", "command": "transform" },
     { "separator": true },
-    { "name": "Buy me a coffee ☕", "command": "coffee" }
+    { "name": "☕ Support author", "command": "coffee" }
   ]
 }
