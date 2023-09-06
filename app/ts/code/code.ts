@@ -30,6 +30,8 @@ try {
   sendError(e, '📄 code.ts |  Function "nodeBundler()"');
 }
 
+if (!bundle) figma.closePlugin()
+
 switch (command) {
   case 'group':
     {
@@ -76,7 +78,7 @@ switch (command) {
         sendError(e, '📄 code.ts | Command "transform" - Function "transformToAutolayout()"');
       }
 
-    break;
+    break; 
   case 'coffee':
     {
       const url = 'https://www.buymeacoffee.com/Denis.Solovey',
