@@ -1,4 +1,4 @@
-<img src="https://s3-alpha-sig.figma.com/plugins/1219008484601651003/62795/cee76b17-0627-4ad3-9e49-5d4eb1259765-cover?Expires=1692576000&Signature=bckHeg9qqhFoFRX~jDGsY~VxElOt5Fc4A3rxWhAIInDZOCCkFGooX6nUOrDXsVn6npLhR8~GAM4val8dujYxqp52FtfQOaLAiQf4q1nZmZSxheIVBipgCQN45-ExVtGrfqWmCyfW8Y9Sc5~wEiFReMOpAQGqqbA~BJuwrcH~D2KwtX9Hw-pKrhZ70VJQRTCytovrkPL7dS9OqDdUDToMhnrr5KrYkr~feYmZX6el5A9s4aWPTfF0GY4e4NnFE1bn8vMtf-K00ypw1v6t5striRbsjnh0AV0rzbsuoRhgEcsBnJQYemvaqILBaE1OI-cnS2-jizVQ4iP8w8wgITZIFw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+![image](https://github.com/DenisSoloveyDesign/multiple-wrapper/assets/82750396/a271e29e-3fb6-40b3-8662-912ac7c922e5)
 
 Sometimes you need to wrap elements inside several frames or groups, and regular methods are not enough for this. That is why this plugin was created. It can wrap selected elements together or wrap each of selected as frames or auto layouts, and also it can change selected frames or groups to auto layouts
 
