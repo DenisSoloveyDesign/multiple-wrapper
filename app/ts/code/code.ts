@@ -30,8 +30,6 @@ try {
   sendError(e, '📄 code.ts |  Function "nodeBundler()"');
 }
 
-if (!bundle) figma.closePlugin()
-
 switch (command) {
   case 'group':
     {
@@ -43,6 +41,7 @@ switch (command) {
         } catch (e) {
           sendError(e, '📄 code.ts | Command "group" - Function "group()"');
         }
+      else figma.closePlugin(strings.nothingToGroup);
     }
     break;
   case 'frame':
@@ -55,6 +54,8 @@ switch (command) {
       } catch (e) {
         sendError(e, '📄 code.ts | Command "frame"');
       }
+    else figma.closePlugin(strings.nothingToGroup);
+
     break;
   case 'autoLayout':
     if (bundle)
@@ -67,6 +68,7 @@ switch (command) {
       } catch (e) {
         sendError(e, '📄 code.ts | Command "autoLayout"');
       }
+    else figma.closePlugin(strings.nothingToGroup);
 
     break;
   case 'transform':
@@ -77,8 +79,9 @@ switch (command) {
       } catch (e) {
         sendError(e, '📄 code.ts | Command "transform" - Function "transformToAutolayout()"');
       }
+    else figma.closePlugin(strings.nothingToChange);
 
-    break; 
+    break;
   case 'coffee':
     {
       const url = 'https://www.buymeacoffee.com/Denis.Solovey',

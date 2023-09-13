@@ -6,5 +6,8 @@ export const strings = {
   frameAdded: 'Frames added',
   autoLayoutAdded: 'Auto layout added',
 
-  onError: 'Sending error to creator...'
+  nothingToChange: 'Nothing to change to auto layout',
+  nothingToGroup: 'Nothing to group',
+
+  onError: 'Sending error to creator...',
 };
